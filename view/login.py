@@ -14,7 +14,7 @@ class LoginWindow(QtGui.QWidget):
 
 	def initUI(self):
 
-		self.resize(350,150)
+		self.resize(350,200)
 		self.setWindowTitle('please login your account')
 
 		icon = QtGui.QIcon('../icons/enlogo.png')
@@ -25,6 +25,9 @@ class LoginWindow(QtGui.QWidget):
 
 		unInput = QtGui.QLineEdit()
 		pwInput = QtGui.QLineEdit()
+
+		cbNotAgain = QtGui.QCheckBox('alway sign in')
+
 
 		btnReg = QtGui.QCommandLinkButton('create account', 'create account for free')
 		btnSubmit = QtGui.QCommandLinkButton('Sign In', 'sign in your account')
@@ -37,6 +40,8 @@ class LoginWindow(QtGui.QWidget):
 
 		grid.addWidget(password, 2, 0)
 		grid.addWidget(pwInput, 2, 1)
+
+		grid.addWidget(cbNotAgain, 3, 0, 1, 2)
 
 		hbox = QtGui.QHBoxLayout()
 		hbox.addWidget(btnReg)
